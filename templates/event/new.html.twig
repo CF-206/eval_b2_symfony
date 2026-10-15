@@ -9,8 +9,15 @@
         <div class="card">
             <h1>Ajouter un événement</h1>
             <p class="muted">Votre événement sera visible après validation par un administrateur.</p>
-
-            <form class="form" method="post" enctype="multipart/form-data">
+            {{ form_errors(EventForm) }}
+            {{ form_start(EventForm, { 'attr': { 'class': 'form' } }) }}
+                {{ form_row(EventForm.titre) }}
+                {{ form_row(EventForm.date) }}
+                {{ form_row(EventForm.infos) }}
+                {{ form_row(EventForm.categorie) }}
+                {{ form_row(EventForm.nbrplaces) }}
+                {{ form_row(EventForm.image) }}
+            {# <form class="form" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="event_title" class="required">Titre</label>
                     <input type="text" id="event_title" name="event[title]" placeholder="Ex. : Soirée jazz au Kiosque" required>
@@ -45,10 +52,10 @@
                     <label for="event_image">Image à la une</label>
                     <input type="file" id="event_image" name="event[image]" accept="image/*">
                     <div class="help-text">JPG, PNG ou WebP.</div>
-                </div>
+                </div> #}
 
                 <button type="submit">Enregistrer l'événement</button>
-            </form>
+            {{ form_end(EventForm) }}
         </div>
     </div>
 {% endblock %}
