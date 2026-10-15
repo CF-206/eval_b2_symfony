@@ -64,7 +64,7 @@ git push
 
 ### Prérequis
 
-- PHP **8.2** ou plus, avec l'extension `pdo_sqlite` (`php -m | grep sqlite` pour vérifier)
+- PHP **8.3** ou plus, avec l'extension `pdo_sqlite` (`php -m | grep sqlite` pour vérifier)
 - [Composer](https://getcomposer.org/)
 - [Symfony CLI](https://symfony.com/download) (recommandé)
 
